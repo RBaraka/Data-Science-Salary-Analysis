@@ -18,11 +18,10 @@ An interactive data visualization project analyzing salary trends, job demand, a
 ## 🗂️ Project Structurer
 - index.html # Main dashboard entry point 
     - salaries.csv # Original salary dataset
-    - dashboard_optimized.html # Main interactive dashboard
-    - salary_trends_optimized.html # Salary trends over time
-    - world_map_optimized.html # Geographic salary distribution
-    - job_demand_optimized.html # Job market demand analysis
-    - *_data_optimized.json # Processed data for visualizations
+    - dashboard.html # Main interactive dashboard
+    - salary_trends.html # Salary trends over time
+    - world_map.html # Geographic salary distribution
+    - job_demand.html # Job market demand analysis
 
 
 ## 🛠️ Technologies Used
@@ -30,7 +29,7 @@ An interactive data visualization project analyzing salary trends, job demand, a
 - **Python**: Data analysis and processing (original notebooks)
 - **Altair**: Statistical visualization library
 - **Pandas**: Data manipulation and analysis
-- **Jupyter Notebooks**: Development environment
+- **Jupyter Notebooks**: in VScode
 - **HTML/JavaScript**: Web deployment for sharing
 
 ## 📈 Key Analysis Areas
