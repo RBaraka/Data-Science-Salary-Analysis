@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/world-110m.json", "format": {"feature": "countries", "type": "topojson"}}, "mark": {"type": "geoshape", "fill": "lightsteelblue", "stroke": "white", "strokeWidth": 0.8}, "projection": {"type": "equalEarth"}, "title": {"text": "Global Data Science Jobs by Country", "anchor": "start", "color": "black", "dx": 20, "dy": 20, "fontSize": 18, "fontWeight": "bold", "subtitle": "Toggle for more details"}}, {"data": {"url": "world_map_data.json"}, "mark": {"type": "circle", "opacity": 0.8}, "encoding": {"color": {"field": "company_location", "legend": {"columns": 1, "labelFontSize": 9, "labelLimit": 120, "offset": 10, "orient": "right", "titleFontSize": 11, "titleLimit": 150}, "scale": {"range": ["#d73027", "#fc8d59", "#91bfdb", "#4575b4", "#fee08b", "#d9d9d9", "#762a83", "#af8dc3", "#7fbf7b", "#1b7837", "#f46d43", "#a50026", "#313695", "#74add1", "#abd9e9", "#e0f3f8", "#fdae61", "#f1b6da", "#c2a5cf", "#9970ab"]}, "sort": {"field": "job_count", "order": "descending"}, "title": "Country (by Job Count)", "type": "nominal"}, "latitude": {"field": "latitude", "type": "quantitative"}, "longitude": {"field": "longitude", "type": "quantitative"}, "size": {"field": "job_count", "legend": {"direction": "horizontal", "labelFontSize": 9, "offset": 3, "orient": "bottom-left", "titleFontSize": 11, "titleLimit": 200}, "scale": {"range": [80, 800], "type": "sqrt"}, "title": "Number of Jobs", "type": "quantitative"}, "tooltip": [{"field": "company_location", "title": "Country", "type": "nominal"}, {"field": "job_count", "title": "Number of Jobs", "type": "quantitative"}, {"field": "work_ratio", "title": "On-site | Remote | Hybrid %", "type": "nominal"}]}, "projection": {"type": "equalEarth"}}, {"data": {"url": "world_map_data.json"}, "mark": {"type": "text", "align": "center", "baseline": "middle", "color": "black", "dy": -12, "fontSize": 8, "fontWeight": "bold"}, "encoding": {"latitude": {"field": "latitude", "type": "quantitative"}, "longitude": {"field": "longitude", "type": "quantitative"}, "text": {"field": "job_count", "format": ".0f", "type": "quantitative"}}, "projection": {"type": "equalEarth"}, "transform": [{"window": [{"op": "rank", "field": "job_count", "as": "rank"}], "sort": [{"field": "job_count", "order": "descending"}]}, {"filter": "(datum.rank <= 10)"}]}], "height": 450, "resolve": {"scale": {"color": "independent", "size": "independent"}}, "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json"};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
