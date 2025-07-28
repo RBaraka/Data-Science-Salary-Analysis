@@ -13,13 +13,13 @@ An interactive data visualization project analyzing salary trends, job demand, a
 - **Interactive Dashboards**: Multiple optimized HTML dashboards for data exploration
 
 ## 🗂️ Project Structurer
-  ├── index.html # Main dashboard entry point 
-    ├── salaries.csv # Original salary dataset 
-    ├── dashboard_optimized.html # Main interactive dashboard 
-    ├── salary_trends_optimized.html # Salary trends over time 
-    ├── world_map_optimized.html # Geographic salary distribution 
-    ├── job_demand_optimized.html # Job market demand analysis 
-    └── *_data_optimized.json # Processed data for visualizations
+- index.html # Main dashboard entry point 
+    - salaries.csv # Original salary dataset
+    - dashboard_optimized.html # Main interactive dashboard
+    - salary_trends_optimized.html # Salary trends over time
+    - world_map_optimized.html # Geographic salary distribution
+    - job_demand_optimized.html # Job market demand analysis
+    - *_data_optimized.json # Processed data for visualizations
 
 
 ## 🛠️ Technologies Used
