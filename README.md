@@ -5,6 +5,9 @@ An interactive data visualization project analyzing salary trends, job demand, a
 ## 🌐 Live Demo
 [View Interactive Dashboard](https://rbaraka.github.io/Data-Science-Salary-Analysis/)
 
+## Data Source
+[kaggle Dataset](https://www.kaggle.com/datasets/adilshamim8/salaries-for-data-science-jobs)
+
 ## 📊 Features
 
 - **Salary Trends Analysis**: Interactive charts showing salary progression over time
