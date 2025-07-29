@@ -2,20 +2,20 @@
 
 An interactive data visualization project analyzing salary trends, job demand, and geographic distribution in the data science field.
 
-## 🌐 Live Demo
+## Live Demo
 [View Interactive Dashboard](https://rbaraka.github.io/Data-Science-Salary-Analysis/)
 
 ## Data Source
 [kaggle Dataset](https://www.kaggle.com/datasets/adilshamim8/salaries-for-data-science-jobs)
 
-## 📊 Features
+## Features
 
 - **Salary Trends Analysis**: Interactive charts showing salary progression over time
 - **Geographic Distribution**: World map visualization of data science salaries by location
 - **Job Demand Insights**: Analysis of market demand for different data science roles
 - **Interactive Dashboards**: Multiple optimized HTML dashboards for data exploration
 
-## 🗂️ Project Structurer
+## Project Structurer
 - index.html # Main dashboard entry point 
     - salaries.csv # Original salary dataset
     - dashboard.html # Main interactive dashboard
@@ -24,7 +24,7 @@ An interactive data visualization project analyzing salary trends, job demand, a
     - job_demand.html # Job market demand analysis
 
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Python**: Data analysis and processing (original notebooks)
 - **Altair**: Statistical visualization library
@@ -32,18 +32,18 @@ An interactive data visualization project analyzing salary trends, job demand, a
 - **Jupyter Notebooks**: in VScode
 - **HTML/JavaScript**: Web deployment for sharing
 
-## 📈 Key Analysis Areas
+## Key Analysis Areas
 
 - **Salary Trends**: Compensation patterns across experience levels and time
 - **Geographic Distribution**: How location affects data science salaries
 - **Job Market Demand**: Analysis of role availability and requirements
 - **Role Comparisons**: Salary differences between data science positions
 
-## 🚀 From Notebook to Web
+## From Notebook to Web
 
 This project demonstrates converting Python/Altair notebook analysis into shareable web visualizations, making data insights accessible to a broader audience through GitHub Pages.
 
-## 🏷️ Topics
+## Topics
 `datascience` `python` `altair` `jupyter-notebook` `data-visualization` `salary-analysis`
 
 ---
